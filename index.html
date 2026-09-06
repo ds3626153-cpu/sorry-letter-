@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 
 <meta name="viewport"
@@ -11,11 +12,20 @@
 
 <style>
 
+/* =========================
+   RESET
+========================= */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
+
+
+/* =========================
+   BODY
+========================= */
 
 html,
 body{
@@ -24,6 +34,7 @@ body{
 }
 
 body{
+
     min-height:100vh;
 
     font-family:
@@ -45,11 +56,12 @@ body{
 }
 
 
-/* ==============================
+/* =========================
    PAGE
-============================== */
+========================= */
 
 .page{
+
     width:100%;
     min-height:100vh;
 
@@ -70,11 +82,12 @@ body{
 }
 
 
-/* ==============================
+/* =========================
    CARD
-============================== */
+========================= */
 
 .card{
+
     width:100%;
     max-width:520px;
 
@@ -83,9 +96,10 @@ body{
     border-radius:30px;
 
     background:
-    rgba(255,255,255,0.80);
+    rgba(255,255,255,0.82);
 
     backdrop-filter:blur(15px);
+
     -webkit-backdrop-filter:blur(15px);
 
     box-shadow:
@@ -94,11 +108,12 @@ body{
 }
 
 
-/* ==============================
+/* =========================
    EMOJI
-============================== */
+========================= */
 
 .emoji{
+
     font-size:58px;
 
     margin-bottom:20px;
@@ -110,11 +125,12 @@ body{
 }
 
 
-/* ==============================
+/* =========================
    MAIN TEXT
-============================== */
+========================= */
 
 .mainText{
+
     font-size:23px;
 
     line-height:1.6;
@@ -125,11 +141,12 @@ body{
 }
 
 
-/* ==============================
+/* =========================
    PROMISE
-============================== */
+========================= */
 
 .promise{
+
     margin-top:25px;
 
     font-size:20px;
@@ -140,30 +157,32 @@ body{
 }
 
 .promise small{
+
     font-size:17px;
 }
 
 
-/* ==============================
-   MUSIC MESSAGE
-============================== */
+/* =========================
+   MUSIC HINT
+========================= */
 
 .musicHint{
+
     margin-top:18px;
 
     font-size:14px;
 
     color:#9a5877;
 
-    opacity:0.85;
 }
 
 
-/* ==============================
+/* =========================
    BUTTON
-============================== */
+========================= */
 
 button{
+
     margin-top:30px;
 
     padding:14px 32px;
@@ -196,15 +215,18 @@ button{
 }
 
 button:active{
+
     transform:scale(0.94);
+
 }
 
 
-/* ==============================
-   PAGE 2
-============================== */
+/* =========================
+   PAGE 2 TITLE
+========================= */
 
 .videoTitle{
+
     font-size:24px;
 
     font-weight:bold;
@@ -215,7 +237,12 @@ button:active{
 }
 
 
+/* =========================
+   VIDEO
+========================= */
+
 .videoBox{
+
     width:100%;
 
     max-width:500px;
@@ -232,6 +259,7 @@ button:active{
 }
 
 video{
+
     display:block;
 
     width:100%;
@@ -242,11 +270,12 @@ video{
 }
 
 
-/* ==============================
+/* =========================
    PAGE 3
-============================== */
+========================= */
 
 .finalEmoji{
+
     font-size:80px;
 
     animation:
@@ -256,6 +285,7 @@ video{
 }
 
 .finalText{
+
     margin-top:20px;
 
     font-size:34px;
@@ -268,17 +298,19 @@ video{
 }
 
 .finalHeart{
+
     margin-top:20px;
 
     font-size:48px;
 }
 
 
-/* ==============================
+/* =========================
    FLOATING HEARTS
-============================== */
+========================= */
 
 .heartFloat{
+
     position:fixed;
 
     bottom:-40px;
@@ -296,9 +328,9 @@ video{
 }
 
 
-/* ==============================
+/* =========================
    ANIMATIONS
-============================== */
+========================= */
 
 @keyframes floating{
 
@@ -319,11 +351,13 @@ video{
 @keyframes riseUp{
 
     0%{
+
         transform:
         translateY(0)
         rotate(0deg);
 
         opacity:0;
+
     }
 
     15%{
@@ -331,39 +365,52 @@ video{
     }
 
     100%{
+
         transform:
         translateY(-110vh)
         rotate(25deg);
 
         opacity:0;
+
     }
+
 }
 
 
-/* ==============================
+/* =========================
    MOBILE
-============================== */
+========================= */
 
 @media(max-width:480px){
 
     .card{
+
         padding:30px 20px;
+
     }
 
     .mainText{
+
         font-size:21px;
+
     }
 
     .promise{
+
         font-size:18px;
+
     }
 
     .videoTitle{
+
         font-size:21px;
+
     }
 
     .finalText{
+
         font-size:30px;
+
     }
 
 }
@@ -376,9 +423,9 @@ video{
 <body>
 
 
-<!-- ==============================
+<!-- =========================
      BACKGROUND MUSIC
-============================== -->
+========================= -->
 
 <audio
     id="bgMusic"
@@ -392,9 +439,9 @@ video{
 </audio>
 
 
-<!-- ==============================
+<!-- =========================
      PAGE 1
-============================== -->
+========================= -->
 
 <section
     class="page active"
@@ -426,7 +473,9 @@ video{
 
             I promise 🥺<br>
 
-            I won't make those inappropriate jokes anymore....<br>
+            I won't talk about big dicks anymore....
+
+            <br>
 
             <small>
                 (Not mid😁)
@@ -437,13 +486,13 @@ video{
 
         <div class="musicHint">
 
-            🎵 Tap anywhere to start the music 🎵
+            🎵 Tap Continue to start the music 🎵
 
         </div>
 
 
         <button
-            onclick="nextPage(2)">
+            id="continueBtn">
 
             Continue 🥺👉🏻👈🏻
 
@@ -454,10 +503,9 @@ video{
 </section>
 
 
-
-<!-- ==============================
+<!-- =========================
      PAGE 2
-============================== -->
+========================= -->
 
 <section
     class="page"
@@ -490,7 +538,7 @@ video{
 
 
     <button
-        onclick="nextPage(3)">
+        id="nextBtn">
 
         Next 🥺🫶🏻
 
@@ -499,10 +547,9 @@ video{
 </section>
 
 
-
-<!-- ==============================
+<!-- =========================
      PAGE 3
-============================== -->
+========================= -->
 
 <section
     class="page"
@@ -531,12 +578,11 @@ video{
 </section>
 
 
-
 <script>
 
-/* ==============================
+/* =========================
    ELEMENTS
-============================== */
+========================= */
 
 const bgMusic =
     document.getElementById("bgMusic");
@@ -544,56 +590,90 @@ const bgMusic =
 const sorryVideo =
     document.getElementById("sorryVideo");
 
+const continueBtn =
+    document.getElementById("continueBtn");
 
-/* ==============================
+const nextBtn =
+    document.getElementById("nextBtn");
+
+
+/* =========================
    MUSIC VOLUME
-============================== */
+========================= */
 
 bgMusic.volume = 0.55;
 
 
-/* ==============================
+/* =========================
    START MUSIC
-============================== */
+========================= */
 
-function startMusic(){
+function playMusic(){
 
-    if(bgMusic.paused){
+    bgMusic.play()
+    .then(function(){
 
-        bgMusic.play()
-        .catch(function(){
+        console.log("Music started!");
 
-            console.log(
-                "Music waiting for user interaction..."
-            );
+    })
+    .catch(function(error){
 
-        });
+        console.log(
+            "Music could not start:",
+            error
+        );
 
-    }
+    });
 
 }
 
 
-/* ==============================
-   FIRST USER INTERACTION
-============================== */
+/* =========================
+   CONTINUE BUTTON
+========================= */
 
-document.addEventListener(
+continueBtn.addEventListener(
     "click",
-    startMusic,
-    {
-        once:true
+    function(){
+
+        /*
+           User interaction-এর
+           ভিতরেই music start করছি।
+        */
+
+        playMusic();
+
+
+        /*
+           Page 2 show
+        */
+
+        document
+            .getElementById("page1")
+            .classList.remove("active");
+
+        document
+            .getElementById("page2")
+            .classList.add("active");
+
+        window.scrollTo(0,0);
+
     }
 );
 
 
-/* ==============================
+/* =========================
    VIDEO PLAY
-============================== */
+========================= */
 
 sorryVideo.addEventListener(
     "play",
     function(){
+
+        /*
+           Video চালু হলে
+           background music বন্ধ।
+        */
 
         bgMusic.pause();
 
@@ -601,73 +681,86 @@ sorryVideo.addEventListener(
 );
 
 
-/* ==============================
-   VIDEO ENDED
-============================== */
+/* =========================
+   VIDEO PAUSE
+========================= */
 
 sorryVideo.addEventListener(
-    "ended",
+    "pause",
     function(){
 
-        bgMusic.play()
-        .catch(function(){});
+        /*
+           Video pause করলে music
+           automatically resume করবে না।
+
+           কারণ user চাইলে video pause করে
+           আবার শুনতে পারে।
+        */
 
     }
 );
 
 
-/* ==============================
-   PAGE CHANGE
-============================== */
+/* =========================
+   VIDEO ENDED
+========================= */
 
-function nextPage(pageNumber){
+sorryVideo.addEventListener(
+    "ended",
+    function(){
 
-    document
-        .querySelectorAll(".page")
-        .forEach(function(page){
+        /*
+           Video শেষ হলে
+           background music আবার চালু।
+        */
 
-            page.classList.remove("active");
-
-        });
-
-
-    document
-        .getElementById(
-            "page" + pageNumber
-        )
-        .classList.add("active");
-
-
-    /*
-       Page 1 থেকে Continue চাপলে
-       music শুরু করার চেষ্টা করবে।
-    */
-
-    if(bgMusic.paused){
-
-        bgMusic.play()
-        .catch(function(){});
+        playMusic();
 
     }
+);
 
 
-    /*
-       Video page-এ যাওয়ার সময়
-       video নিজে থেকে play হবে না,
-       তাই music চলতে থাকবে।
-    */
+/* =========================
+   NEXT BUTTON
+========================= */
 
-    window.scrollTo(
-        0,
-        0
-    );
+nextBtn.addEventListener(
+    "click",
+    function(){
 
-}
+        /*
+           Page 2 → Page 3
+        */
+
+        document
+            .getElementById("page2")
+            .classList.remove("active");
+
+        document
+            .getElementById("page3")
+            .classList.add("active");
 
 
-/* ==============================
+        /*
+           Music চলতে থাকবে।
+        */
+
+        if(bgMusic.paused){
+
+            playMusic();
+
+        }
+
+
+        window.scrollTo(0,0);
+
+    }
+);
+
+
+/* =========================
    FLOATING HEARTS
-============================== */
+========================= */
 
 function createHeart(){
 
@@ -731,9 +824,9 @@ function createHeart(){
 }
 
 
-/* ==============================
-   CREATE HEARTS
-============================== */
+/* =========================
+   HEARTS START
+========================= */
 
 setInterval(
     createHeart,
