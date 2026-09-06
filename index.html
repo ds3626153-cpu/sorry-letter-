@@ -1,0 +1,746 @@
+<!DOCTYPE html>  <html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>Happy Birthday Deepika 🤍💐</title>  <style>  
+*{  
+  margin:0;  
+  padding:0;  
+  box-sizing:border-box;  
+}  
+  
+html,body{  
+  width:100%;  
+  min-height:100%;  
+}  
+  
+body{  
+  font-family:Arial,sans-serif;  
+  color:#54264f;  
+  overflow-x:hidden;  
+  
+  background:  
+    radial-gradient(circle at 10% 10%,#ffd5eb 0%,transparent 35%),  
+    radial-gradient(circle at 90% 20%,#d8c5ff 0%,transparent 40%),  
+    linear-gradient(135deg,#f8d7ef,#dfd1ff,#f7d7ed);  
+}  
+  
+/* HEARTS */  
+  
+#heartContainer{  
+  position:fixed;  
+  inset:0;  
+  pointer-events:none;  
+  overflow:hidden;  
+  z-index:100;  
+}  
+  
+.heart{  
+  position:absolute;  
+  bottom:-50px;  
+  opacity:0;  
+  animation:heartUp linear forwards;  
+}  
+  
+@keyframes heartUp{  
+  0%{  
+    transform:translateY(0) scale(.6) rotate(0deg);  
+    opacity:0;  
+  }  
+  
+  10%{  
+    opacity:.9;  
+  }  
+  
+  50%{  
+    opacity:.8;  
+  }  
+  
+  100%{  
+    transform:translateY(-115vh) scale(1.25) rotate(25deg);  
+    opacity:0;  
+  }  
+}  
+  
+/* PAGES */  
+  
+.page{  
+  width:100%;  
+  min-height:100vh;  
+  
+  display:none;  
+  justify-content:center;  
+  align-items:center;  
+  
+  padding:20px;  
+  position:relative;  
+  z-index:2;  
+}  
+  
+.page.active{  
+  display:flex;  
+}  
+  
+/* CARD */  
+  
+.card{  
+  width:100%;  
+  max-width:520px;  
+  
+  padding:32px 24px;  
+  
+  border-radius:30px;  
+  
+  background:rgba(255,255,255,.88);  
+  
+  backdrop-filter:blur(14px);  
+  
+  border:1px solid rgba(255,255,255,.7);  
+  
+  box-shadow:0 20px 60px rgba(92,35,120,.25);  
+  
+  text-align:center;  
+}  
+  
+/* BUTTON */  
+  
+.main-btn{  
+  border:none;  
+  
+  padding:14px 32px;  
+  margin-top:22px;  
+  
+  border-radius:30px;  
+  
+  font-size:17px;  
+  font-weight:bold;  
+  
+  color:white;  
+  
+  background:  
+    linear-gradient(135deg,#d84f9a,#8b55d4);  
+  
+  box-shadow:0 8px 25px rgba(139,70,170,.30);  
+  
+  cursor:pointer;  
+}  
+  
+.main-btn:active{  
+  transform:scale(.96);  
+}  
+  
+/* LOGIN */  
+  
+.login-box h1{  
+  font-size:29px;  
+  margin-bottom:12px;  
+  
+  background:  
+    linear-gradient(90deg,#c94d91,#8255c7);  
+  
+  -webkit-background-clip:text;  
+  -webkit-text-fill-color:transparent;  
+}  
+  
+.login-subtitle{  
+  font-size:15px;  
+  color:#76566f;  
+  margin-bottom:25px;  
+}  
+  
+.password{  
+  width:100%;  
+  
+  padding:15px;  
+  
+  border-radius:16px;  
+  
+  border:2px solid #e6c9e5;  
+  
+  outline:none;  
+  
+  background:#fffaff;  
+  
+  font-size:16px;  
+  
+  text-align:center;  
+}  
+  
+.password:focus{  
+  border-color:#b25bc1;  
+}  
+  
+.error{  
+  min-height:22px;  
+  
+  margin-top:12px;  
+  
+  color:#c33e70;  
+  
+  font-size:14px;  
+  
+  font-weight:bold;  
+}  
+  
+/* MESSAGE */  
+  
+.message-card{  
+  max-width:600px;  
+  max-height:90vh;  
+  overflow-y:auto;  
+}  
+  
+.message-card h2{  
+  font-size:27px;  
+  margin-bottom:20px;  
+  color:#994d9c;  
+}  
+  
+.message{  
+  text-align:left;  
+  
+  font-size:16px;  
+  line-height:1.75;  
+  
+  color:#563c55;  
+}  
+  
+.message strong{  
+  color:#c34f89;  
+}  
+  
+/* VIDEO */  
+  
+.video-page{  
+  flex-direction:column;  
+  padding:20px;  
+  overflow-y:auto;  
+}  
+  
+.video-card{  
+  max-width:650px;  
+  padding:25px 20px;  
+}  
+  
+.video-caption{  
+  font-size:19px;  
+  line-height:1.5;  
+  
+  font-weight:bold;  
+  
+  color:#63375f;  
+  
+  margin-bottom:18px;  
+}  
+  
+.video-container{  
+  width:100%;  
+  
+  display:flex;  
+  justify-content:center;  
+  align-items:center;  
+}  
+  
+.video-container video{  
+  width:100%;  
+  max-width:320px;  
+  
+  height:auto;  
+  max-height:500px;  
+  
+  object-fit:contain;  
+  
+  display:block;  
+  
+  background:#000;  
+  
+  border-radius:20px;  
+  
+  box-shadow:  
+    0 12px 35px rgba(50,20,60,.30);  
+}  
+  
+.video-hint{  
+  margin-top:14px;  
+  
+  font-size:14px;  
+  
+  color:#80617c;  
+}  
+  
+/* LAST PAGE */  
+  
+.last-page{  
+  overflow:hidden;  
+}  
+  
+.last-card{  
+  max-width:500px;  
+  position:relative;  
+  z-index:5;  
+}  
+  
+.last-card h1{  
+  font-size:30px;  
+  line-height:1.45;  
+  
+  margin-bottom:25px;  
+  
+  background:  
+    linear-gradient(90deg,#c74e92,#8056c9);  
+  
+  -webkit-background-clip:text;  
+  -webkit-text-fill-color:transparent;  
+}  
+  
+.last-card p{  
+  font-size:20px;  
+  line-height:1.8;  
+  
+  margin:8px 0;  
+  
+  color:#5d3b59;  
+}  
+  
+.bye{  
+  font-size:27px !important;  
+  color:#c14d91 !important;  
+  font-weight:bold;  
+}  
+  
+/* MOBILE */  
+  
+@media(max-width:600px){  
+  
+  .page{  
+    padding:14px;  
+  }  
+  
+  .card{  
+    padding:28px 18px;  
+    border-radius:26px;  
+  }  
+  
+  .login-box h1{  
+    font-size:26px;  
+  }  
+  
+  .message-card h2{  
+    font-size:24px;  
+  }  
+  
+  .message{  
+    font-size:15px;  
+    line-height:1.7;  
+  }  
+  
+  .video-card{  
+    padding:20px 12px;  
+  }  
+  
+  .video-caption{  
+    font-size:17px;  
+  }  
+  
+  .video-container video{  
+    max-width:280px;  
+    max-height:450px;  
+  }  
+  
+  .last-card h1{  
+    font-size:26px;  
+  }  
+  
+  .last-card p{  
+    font-size:18px;  
+  }  
+}  
+</style>  </head>  <body>  <!-- FLOATING HEARTS -->  <div id="heartContainer"></div>  <!-- BACKGROUND MUSIC -->  <audio  
+id="backgroundMusic"  
+preload="auto"  
+loop>
+
+<source  
+src="https://res.cloudinary.com/s4rjpsff/video/upload/v1788244715/Haareya_Piano_Instrumental___Karaoke_With_Lyrics___Arijit_Singh___Notes___Hindi_Song_Keyboard_256k__1.mp3"  
+type="audio/mpeg">
+
+</audio>  <!-- =========================  
+     PAGE 1 — LOGIN  
+========================= -->  <section id="page1" class="page active">    <div class="card login-box">  <div style="font-size:42px;margin-bottom:10px;">  
+  💐  
+</div>  
+
+<h1>  
+  Happy Birthday Deepika 🤍💐  
+</h1>  
+
+<p class="login-subtitle">  
+  A little surprise from your best friend 🫠🤍  
+</p>  
+
+<input  
+  id="password"  
+  class="password"  
+  type="password"  
+  placeholder="Enter His Password 🔑"  
+  autocomplete="off">  
+
+<button  
+  class="main-btn"  
+  onclick="login()">  
+  Enter 💗  
+</button>  
+
+<div id="error" class="error"></div>
+
+  </div>  </section>  <!-- =========================  
+     PAGE 2 — MESSAGE  
+========================= -->  <section id="page2" class="page">    <div class="card message-card">  <div style="font-size:38px;margin-bottom:10px;">  
+  🌷  
+</div>  
+
+<h2>  
+  Hey best friend... 🤍  
+</h2>  
+
+<div class="message">  
+
+  Dear best friend... there's no point in writing a long,  
+  elaborate message, right?  
+
+  <br><br>  
+
+  But listen this—our friendship might not be exactly the same  
+  as it used to be, but that doesn't mean you've become my  
+  ex or ex-best friend...  
+
+  <br><br>  
+
+  Because best friends never become exes.  
+  I still consider you my first and last best friend,  
+  and I always will 🤍...  
+
+  <br><br>  
+
+  Anyway, take care and keep moving forward in life...  
+  and choose your circle of friends wisely...  
+
+  <br><br>  
+
+  Have a fantastic time celebrating your  
+  <strong>19th birthday!</strong>  
+
+  💐🎂🤍  
+
+</div>  
+
+<button  
+  class="main-btn"  
+  onclick="goToVideo()">  
+
+  Continue 👉🏻  
+
+</button>
+
+  </div>  </section>  <!-- =========================  
+     PAGE 3 — VIDEO  
+========================= -->  <section id="page3" class="page video-page">    <div class="card video-card">  <div class="video-caption">  
+
+  ".I didn't have any pics of you, so here's a short video of you with my three fav pics🫠.."  
+
+</div>  
+
+<div class="video-container">  
+
+  <video  
+    id="birthdayVideo"  
+    controls  
+    playsinline  
+    preload="auto">  
+
+    <source  
+      src="https://res.cloudinary.com/s4rjpsff/video/upload/InShot_20260901_133144430.mp4"  
+      type="video/mp4">  
+
+    Your browser does not support video playback.  
+
+  </video>  
+
+</div>  
+
+<p class="video-hint">  
+  Tap ▶ to watch 🤍  
+</p>  
+
+<button  
+  class="main-btn"  
+  onclick="goToLastPage()">  
+
+  Continue 👉🏻  
+
+</button>
+
+  </div>  </section>  <!-- =========================  
+     PAGE 4 — LAST  
+========================= -->  <section id="page4" class="page last-page">    <div class="card last-card">  <div style="font-size:45px;margin-bottom:12px;">  
+  🥰💗  
+</div>  
+
+<h1>  
+  Thanks yaar,, for watching this 🥰🤍  
+</h1>  
+
+<p>  
+  Gift ta Due roilo btw 🫠😁  
+</p>  
+
+<p class="bye">  
+  Byee🥰👋🏻  
+</p>
+
+  </div>  </section>  <script>  
+  
+/* =========================  
+   PASSWORD  
+========================= */  
+  
+const PASSWORD = "Deepika89";  
+  
+  
+/* =========================  
+   ELEMENTS  
+========================= */  
+  
+const music =  
+  document.getElementById("backgroundMusic");  
+  
+const video =  
+  document.getElementById("birthdayVideo");  
+  
+const passwordInput =  
+  document.getElementById("password");  
+  
+const error =  
+  document.getElementById("error");  
+  
+  
+/* =========================  
+   PAGE SWITCH  
+========================= */  
+  
+function showPage(id){  
+  
+  document  
+    .querySelectorAll(".page")  
+    .forEach(function(page){  
+  
+      page.classList.remove("active");  
+  
+    });  
+  
+  document  
+    .getElementById(id)  
+    .classList.add("active");  
+}  
+  
+  
+/* =========================  
+   LOGIN  
+========================= */  
+  
+function login(){  
+  
+  const entered =  
+    passwordInput.value.trim();  
+  
+  if(entered === PASSWORD){  
+  
+    error.innerText = "";  
+  
+    music.volume = 0.40;  
+  
+    /*  
+      Login button press-এর পরে  
+      music play করার চেষ্টা।  
+    */  
+  
+    music.play().catch(function(){});  
+  
+    showPage("page2");  
+  
+  }  
+  
+  else{  
+  
+    error.innerText =  
+      "Please contact your frnd who sent you this link...";  
+  
+  }  
+}  
+  
+  
+/* =========================  
+   ENTER KEY  
+========================= */  
+  
+passwordInput.addEventListener(  
+  "keydown",  
+  function(event){  
+  
+    if(event.key === "Enter"){  
+      login();  
+    }  
+  
+  }  
+);  
+  
+  
+/* =========================  
+   PAGE 2 → VIDEO  
+========================= */  
+  
+function goToVideo(){  
+  
+  showPage("page3");  
+  
+}  
+  
+  
+/* =========================  
+   VIDEO MUSIC CONTROL  
+========================= */  
+  
+/*  
+  Video শুরু হলে  
+  background music বন্ধ।  
+*/  
+  
+video.addEventListener(  
+  "play",  
+  function(){  
+  
+    music.pause();  
+  
+  }  
+);  
+  
+  
+/*  
+  Video pause হলেও  
+  background music চালু হবে না।  
+*/  
+  
+video.addEventListener(  
+  "pause",  
+  function(){  
+  
+    music.pause();  
+  
+  }  
+);  
+  
+  
+/*  
+  Video পুরোপুরি শেষ হলে  
+  background music আবার শুরু।  
+*/  
+  
+video.addEventListener(  
+  "ended",  
+  function(){  
+  
+    music.play().catch(function(){});  
+  
+  }  
+);  
+  
+  
+/* =========================  
+   VIDEO → LAST PAGE  
+========================= */  
+  
+function goToLastPage(){  
+  
+  video.pause();  
+  
+  showPage("page4");  
+  
+  music.play().catch(function(){});  
+  
+}  
+  
+  
+/* =========================  
+   HEART ANIMATION  
+========================= */  
+  
+function createHeart(){  
+  
+  const container =  
+    document.getElementById("heartContainer");  
+  
+  const heart =  
+    document.createElement("div");  
+  
+  heart.className = "heart";  
+  
+  const hearts = [  
+    "💗",  
+    "💕",  
+    "💖",  
+    "💓",  
+    "💞",  
+    "💘"  
+  ];  
+  
+  heart.innerText =  
+    hearts[  
+      Math.floor(  
+        Math.random() * hearts.length  
+      )  
+    ];  
+  
+  heart.style.left =  
+    Math.random() * 100 + "vw";  
+  
+  heart.style.fontSize =  
+    (18 + Math.random()*18) + "px";  
+  
+  heart.style.animationDuration =  
+    (4 + Math.random()*4) + "s";  
+  
+  container.appendChild(heart);  
+  
+  setTimeout(function(){  
+  
+    heart.remove();  
+  
+  },8500);  
+}  
+  
+  
+/*  
+  Website open হওয়ার  
+  সঙ্গে সঙ্গেই hearts শুরু।  
+*/  
+  
+setInterval(  
+  createHeart,  
+  450  
+);  
+  
+  
+/*  
+  শুরুতেই কয়েকটা heart।  
+*/  
+  
+for(let i = 0; i < 6; i++){  
+  
+  setTimeout(  
+    createHeart,  
+    i * 300  
+  );  
+  
+}  
+  
+</script>  </body>  
+</html>
