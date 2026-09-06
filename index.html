@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 
 <meta name="viewport"
@@ -10,12 +9,7 @@
 
 <title>For Shreyaa 🥺🫶🏻</title>
 
-
 <style>
-
-/* =========================================
-   RESET
-========================================= */
 
 *{
     margin:0;
@@ -23,13 +17,13 @@
     box-sizing:border-box;
 }
 
-
-/* =========================================
-   BODY
-========================================= */
+html,
+body{
+    width:100%;
+    min-height:100%;
+}
 
 body{
-
     min-height:100vh;
 
     font-family:
@@ -45,19 +39,17 @@ body{
         #e7dcff
     );
 
-    overflow:hidden;
-
     color:#5b2945;
 
+    overflow:hidden;
 }
 
 
-/* =========================================
+/* ==============================
    PAGE
-========================================= */
+============================== */
 
 .page{
-
     width:100%;
     min-height:100vh;
 
@@ -71,21 +63,18 @@ body{
     padding:25px;
 
     text-align:center;
-
 }
-
 
 .page.active{
     display:flex;
 }
 
 
-/* =========================================
-   PAGE 1 CARD
-========================================= */
+/* ==============================
+   CARD
+============================== */
 
 .card{
-
     width:100%;
     max-width:520px;
 
@@ -94,25 +83,22 @@ body{
     border-radius:30px;
 
     background:
-    rgba(255,255,255,0.78);
+    rgba(255,255,255,0.80);
 
     backdrop-filter:blur(15px);
-
     -webkit-backdrop-filter:blur(15px);
 
     box-shadow:
     0 20px 50px
     rgba(0,0,0,0.15);
-
 }
 
 
-/* =========================================
+/* ==============================
    EMOJI
-========================================= */
+============================== */
 
 .emoji{
-
     font-size:58px;
 
     margin-bottom:20px;
@@ -121,16 +107,14 @@ body{
     floating 2s
     ease-in-out
     infinite;
-
 }
 
 
-/* =========================================
-   MAIN MESSAGE
-========================================= */
+/* ==============================
+   MAIN TEXT
+============================== */
 
 .mainText{
-
     font-size:23px;
 
     line-height:1.6;
@@ -138,16 +122,14 @@ body{
     font-weight:bold;
 
     color:#5b2945;
-
 }
 
 
-/* =========================================
+/* ==============================
    PROMISE
-========================================= */
+============================== */
 
 .promise{
-
     margin-top:25px;
 
     font-size:20px;
@@ -155,23 +137,33 @@ body{
     line-height:1.6;
 
     color:#743652;
-
 }
-
 
 .promise small{
-
     font-size:17px;
-
 }
 
 
-/* =========================================
+/* ==============================
+   MUSIC MESSAGE
+============================== */
+
+.musicHint{
+    margin-top:18px;
+
+    font-size:14px;
+
+    color:#9a5877;
+
+    opacity:0.85;
+}
+
+
+/* ==============================
    BUTTON
-========================================= */
+============================== */
 
 button{
-
     margin-top:30px;
 
     padding:14px 32px;
@@ -201,23 +193,18 @@ button{
 
     transition:
     transform 0.2s;
-
 }
-
 
 button:active{
-
     transform:scale(0.94);
-
 }
 
 
-/* =========================================
-   PAGE 2 TITLE
-========================================= */
+/* ==============================
+   PAGE 2
+============================== */
 
 .videoTitle{
-
     font-size:24px;
 
     font-weight:bold;
@@ -225,16 +212,10 @@ button:active{
     color:#66314e;
 
     margin-bottom:20px;
-
 }
 
 
-/* =========================================
-   VIDEO BOX
-========================================= */
-
 .videoBox{
-
     width:100%;
 
     max-width:500px;
@@ -248,12 +229,9 @@ button:active{
     box-shadow:
     0 20px 50px
     rgba(0,0,0,0.25);
-
 }
 
-
 video{
-
     display:block;
 
     width:100%;
@@ -261,28 +239,23 @@ video{
     max-height:70vh;
 
     background:#000;
-
 }
 
 
-/* =========================================
+/* ==============================
    PAGE 3
-========================================= */
+============================== */
 
 .finalEmoji{
-
     font-size:80px;
 
     animation:
     floating 2s
     ease-in-out
     infinite;
-
 }
 
-
 .finalText{
-
     margin-top:20px;
 
     font-size:34px;
@@ -292,25 +265,20 @@ video{
     font-weight:bold;
 
     color:#ff3f83;
-
 }
 
-
 .finalHeart{
-
     margin-top:20px;
 
     font-size:48px;
-
 }
 
 
-/* =========================================
+/* ==============================
    FLOATING HEARTS
-========================================= */
+============================== */
 
 .heartFloat{
-
     position:fixed;
 
     bottom:-40px;
@@ -325,13 +293,12 @@ video{
     riseUp 5s
     linear
     forwards;
-
 }
 
 
-/* =========================================
+/* ==============================
    ANIMATIONS
-========================================= */
+============================== */
 
 @keyframes floating{
 
@@ -349,17 +316,14 @@ video{
 
 }
 
-
 @keyframes riseUp{
 
     0%{
-
         transform:
         translateY(0)
         rotate(0deg);
 
         opacity:0;
-
     }
 
     15%{
@@ -367,56 +331,39 @@ video{
     }
 
     100%{
-
         transform:
         translateY(-110vh)
         rotate(25deg);
 
         opacity:0;
-
     }
-
 }
 
 
-/* =========================================
+/* ==============================
    MOBILE
-========================================= */
+============================== */
 
 @media(max-width:480px){
 
     .card{
-
         padding:30px 20px;
-
     }
-
 
     .mainText{
-
         font-size:21px;
-
     }
-
 
     .promise{
-
         font-size:18px;
-
     }
-
 
     .videoTitle{
-
         font-size:21px;
-
     }
 
-
     .finalText{
-
         font-size:30px;
-
     }
 
 }
@@ -429,9 +376,9 @@ video{
 <body>
 
 
-<!-- =========================================
+<!-- ==============================
      BACKGROUND MUSIC
-========================================= -->
+============================== -->
 
 <audio
     id="bgMusic"
@@ -445,18 +392,15 @@ video{
 </audio>
 
 
-
-<!-- =========================================
+<!-- ==============================
      PAGE 1
-========================================= -->
+============================== -->
 
 <section
     class="page active"
     id="page1">
 
-
     <div class="card">
-
 
         <div class="emoji">
             🥺🫶🏻
@@ -482,11 +426,18 @@ video{
 
             I promise 🥺<br>
 
-            I won't talk about big dicks anymore....<br>
+            I won't make those inappropriate jokes anymore....<br>
 
             <small>
                 (Not mid😁)
             </small>
+
+        </div>
+
+
+        <div class="musicHint">
+
+            🎵 Tap anywhere to start the music 🎵
 
         </div>
 
@@ -498,22 +449,19 @@ video{
 
         </button>
 
-
     </div>
-
 
 </section>
 
 
 
-<!-- =========================================
+<!-- ==============================
      PAGE 2
-========================================= -->
+============================== -->
 
 <section
     class="page"
     id="page2">
-
 
     <div class="videoTitle">
 
@@ -524,24 +472,19 @@ video{
 
     <div class="videoBox">
 
-
         <video
             id="sorryVideo"
             controls
             playsinline
             preload="metadata">
 
-
             <source
                 src="https://res.cloudinary.com/s4rjpsff/video/upload/v1788673996/SEND_THIS_TO_YOUR_FRIEND_SAYING_your_sorry__best_friend__720p.mp4"
                 type="video/mp4">
 
-
-            Your browser does not support
-            this video.
+            Your browser does not support this video.
 
         </video>
-
 
     </div>
 
@@ -553,19 +496,17 @@ video{
 
     </button>
 
-
 </section>
 
 
 
-<!-- =========================================
+<!-- ==============================
      PAGE 3
-========================================= -->
+============================== -->
 
 <section
     class="page"
     id="page3">
-
 
     <div class="finalEmoji">
 
@@ -587,47 +528,39 @@ video{
 
     </div>
 
-
 </section>
 
 
 
 <script>
 
-/* =========================================
+/* ==============================
    ELEMENTS
-========================================= */
+============================== */
 
 const bgMusic =
     document.getElementById("bgMusic");
-
 
 const sorryVideo =
     document.getElementById("sorryVideo");
 
 
-
-/* =========================================
-   MUSIC SETTINGS
-========================================= */
+/* ==============================
+   MUSIC VOLUME
+============================== */
 
 bgMusic.volume = 0.55;
 
 
-
-/* =========================================
+/* ==============================
    START MUSIC
-========================================= */
-
-/*
-   Mobile browser autoplay restriction-এর
-   কারণে প্রথম user interaction-এর পর
-   music start হবে।
-*/
+============================== */
 
 function startMusic(){
 
-    bgMusic.play()
+    if(bgMusic.paused){
+
+        bgMusic.play()
         .catch(function(){
 
             console.log(
@@ -636,12 +569,14 @@ function startMusic(){
 
         });
 
+    }
+
 }
 
 
-/*
-   First click/tap
-*/
+/* ==============================
+   FIRST USER INTERACTION
+============================== */
 
 document.addEventListener(
     "click",
@@ -652,15 +587,9 @@ document.addEventListener(
 );
 
 
-
-/* =========================================
-   VIDEO START
-========================================= */
-
-/*
-   Video play করলেই
-   background music pause হবে।
-*/
+/* ==============================
+   VIDEO PLAY
+============================== */
 
 sorryVideo.addEventListener(
     "play",
@@ -672,44 +601,26 @@ sorryVideo.addEventListener(
 );
 
 
-
-/* =========================================
-   VIDEO END
-========================================= */
-
-/*
-   Video পুরোপুরি শেষ হলেই
-   background music আবার শুরু হবে।
-*/
+/* ==============================
+   VIDEO ENDED
+============================== */
 
 sorryVideo.addEventListener(
     "ended",
     function(){
 
         bgMusic.play()
-            .catch(function(){
-
-                console.log(
-                    "Music could not restart."
-                );
-
-            });
+        .catch(function(){});
 
     }
 );
 
 
-
-/* =========================================
+/* ==============================
    PAGE CHANGE
-========================================= */
+============================== */
 
 function nextPage(pageNumber){
-
-
-    /*
-       সব page hide
-    */
 
     document
         .querySelectorAll(".page")
@@ -720,10 +631,6 @@ function nextPage(pageNumber){
         });
 
 
-    /*
-       Selected page show
-    */
-
     document
         .getElementById(
             "page" + pageNumber
@@ -732,26 +639,22 @@ function nextPage(pageNumber){
 
 
     /*
-       Page 2-তে যাওয়ার সময়
-       music চলতে থাকবে।
-
-       Video play করলে video-এর
-       event music বন্ধ করবে।
+       Page 1 থেকে Continue চাপলে
+       music শুরু করার চেষ্টা করবে।
     */
 
-    if(
-        pageNumber !== 2 &&
-        bgMusic.paused
-    ){
+    if(bgMusic.paused){
 
         bgMusic.play()
-            .catch(function(){});
+        .catch(function(){});
 
     }
 
 
     /*
-       Top-এ নিয়ে যাবে
+       Video page-এ যাওয়ার সময়
+       video নিজে থেকে play হবে না,
+       তাই music চলতে থাকবে।
     */
 
     window.scrollTo(
@@ -762,17 +665,14 @@ function nextPage(pageNumber){
 }
 
 
-
-/* =========================================
+/* ==============================
    FLOATING HEARTS
-========================================= */
+============================== */
 
 function createHeart(){
 
-
     const heart =
         document.createElement("div");
-
 
     heart.className =
         "heartFloat";
@@ -800,26 +700,14 @@ function createHeart(){
         ];
 
 
-    /*
-       Random horizontal position
-    */
-
     heart.style.left =
         Math.random() * 100 + "vw";
 
-
-    /*
-       Random size
-    */
 
     heart.style.fontSize =
         (18 + Math.random() * 15)
         + "px";
 
-
-    /*
-       Random speed
-    */
 
     heart.style.animationDuration =
         (4 + Math.random() * 3)
@@ -830,10 +718,6 @@ function createHeart(){
         heart
     );
 
-
-    /*
-       Remove after animation
-    */
 
     setTimeout(
         function(){
@@ -847,15 +731,14 @@ function createHeart(){
 }
 
 
-/*
-   Create hearts continuously
-*/
+/* ==============================
+   CREATE HEARTS
+============================== */
 
 setInterval(
     createHeart,
     700
 );
-
 
 </script>
 
