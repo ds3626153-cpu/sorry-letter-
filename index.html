@@ -1,20 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
-
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>For Shreyaa 🥺🫶🏻</title>
 
 <style>
-
-/* =========================
-   RESET
-========================= */
 
 *{
     margin:0;
@@ -22,25 +15,9 @@
     box-sizing:border-box;
 }
 
-
-/* =========================
-   BODY
-========================= */
-
-html,
 body{
-    width:100%;
-    min-height:100%;
-}
-
-body{
-
     min-height:100vh;
-
-    font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 
     background:
     linear-gradient(
@@ -51,17 +28,10 @@ body{
     );
 
     color:#5b2945;
-
     overflow:hidden;
 }
 
-
-/* =========================
-   PAGE
-========================= */
-
 .page{
-
     width:100%;
     min-height:100vh;
 
@@ -69,11 +39,9 @@ body{
 
     justify-content:center;
     align-items:center;
-
     flex-direction:column;
 
     padding:25px;
-
     text-align:center;
 }
 
@@ -81,13 +49,7 @@ body{
     display:flex;
 }
 
-
-/* =========================
-   CARD
-========================= */
-
 .card{
-
     width:100%;
     max-width:520px;
 
@@ -95,100 +57,51 @@ body{
 
     border-radius:30px;
 
-    background:
-    rgba(255,255,255,0.82);
+    background:rgba(255,255,255,0.82);
 
     backdrop-filter:blur(15px);
-
     -webkit-backdrop-filter:blur(15px);
 
     box-shadow:
-    0 20px 50px
-    rgba(0,0,0,0.15);
+    0 20px 50px rgba(0,0,0,0.15);
 }
-
-
-/* =========================
-   EMOJI
-========================= */
 
 .emoji{
-
     font-size:58px;
-
     margin-bottom:20px;
 
-    animation:
-    floating 2s
-    ease-in-out
-    infinite;
+    animation:floating 2s ease-in-out infinite;
 }
-
-
-/* =========================
-   MAIN TEXT
-========================= */
 
 .mainText{
-
     font-size:23px;
-
     line-height:1.6;
-
     font-weight:bold;
-
-    color:#5b2945;
 }
 
-
-/* =========================
-   PROMISE
-========================= */
-
 .promise{
-
     margin-top:25px;
-
     font-size:20px;
-
     line-height:1.6;
-
     color:#743652;
 }
 
 .promise small{
-
     font-size:17px;
 }
 
-
-/* =========================
-   MUSIC HINT
-========================= */
-
-.musicHint{
-
+.musicStatus{
     margin-top:18px;
-
     font-size:14px;
-
     color:#9a5877;
-
 }
 
-
-/* =========================
-   BUTTON
-========================= */
-
 button{
-
     margin-top:30px;
 
     padding:14px 32px;
 
     border:none;
-
     border-radius:30px;
 
     background:
@@ -201,136 +114,76 @@ button{
     color:white;
 
     font-size:18px;
-
     font-weight:bold;
 
     cursor:pointer;
 
     box-shadow:
-    0 10px 25px
-    rgba(255,79,145,0.35);
-
-    transition:
-    transform 0.2s;
+    0 10px 25px rgba(255,79,145,0.35);
 }
 
 button:active{
-
     transform:scale(0.94);
-
 }
 
-
-/* =========================
-   PAGE 2 TITLE
-========================= */
-
 .videoTitle{
-
     font-size:24px;
-
     font-weight:bold;
-
     color:#66314e;
-
     margin-bottom:20px;
 }
 
-
-/* =========================
-   VIDEO
-========================= */
-
 .videoBox{
-
     width:100%;
-
     max-width:500px;
 
     border-radius:25px;
-
     overflow:hidden;
 
     background:#000;
 
     box-shadow:
-    0 20px 50px
-    rgba(0,0,0,0.25);
+    0 20px 50px rgba(0,0,0,0.25);
 }
 
 video{
-
     display:block;
-
     width:100%;
-
     max-height:70vh;
-
     background:#000;
 }
 
-
-/* =========================
-   PAGE 3
-========================= */
-
 .finalEmoji{
-
     font-size:80px;
 
-    animation:
-    floating 2s
-    ease-in-out
-    infinite;
+    animation:floating 2s ease-in-out infinite;
 }
 
 .finalText{
-
     margin-top:20px;
 
     font-size:34px;
-
     line-height:1.4;
-
     font-weight:bold;
 
     color:#ff3f83;
 }
 
 .finalHeart{
-
     margin-top:20px;
-
     font-size:48px;
 }
 
-
-/* =========================
-   FLOATING HEARTS
-========================= */
-
 .heartFloat{
-
     position:fixed;
-
     bottom:-40px;
 
-    font-size:22px;
-
     pointer-events:none;
-
     z-index:999;
 
     animation:
-    riseUp 5s
-    linear
-    forwards;
+    riseUp 5s linear forwards;
 }
-
-
-/* =========================
-   ANIMATIONS
-========================= */
 
 @keyframes floating{
 
@@ -345,19 +198,16 @@ video{
     100%{
         transform:translateY(0);
     }
-
 }
 
 @keyframes riseUp{
 
     0%{
-
         transform:
         translateY(0)
         rotate(0deg);
 
         opacity:0;
-
     }
 
     15%{
@@ -365,67 +215,45 @@ video{
     }
 
     100%{
-
         transform:
         translateY(-110vh)
         rotate(25deg);
 
         opacity:0;
-
     }
-
 }
-
-
-/* =========================
-   MOBILE
-========================= */
 
 @media(max-width:480px){
 
     .card{
-
         padding:30px 20px;
-
     }
 
     .mainText{
-
         font-size:21px;
-
     }
 
     .promise{
-
         font-size:18px;
-
     }
 
     .videoTitle{
-
         font-size:21px;
-
     }
 
     .finalText{
-
         font-size:30px;
-
     }
-
 }
 
 </style>
-
 </head>
 
 
 <body>
 
 
-<!-- =========================
-     BACKGROUND MUSIC
-========================= -->
+<!-- BACKGROUND MUSIC -->
 
 <audio
     id="bgMusic"
@@ -439,9 +267,7 @@ video{
 </audio>
 
 
-<!-- =========================
-     PAGE 1
-========================= -->
+<!-- PAGE 1 -->
 
 <section
     class="page active"
@@ -452,7 +278,6 @@ video{
         <div class="emoji">
             🥺🫶🏻
         </div>
-
 
         <div class="mainText">
 
@@ -468,7 +293,6 @@ video{
 
         </div>
 
-
         <div class="promise">
 
             I promise 🥺<br>
@@ -483,13 +307,13 @@ video{
 
         </div>
 
+        <div
+            class="musicStatus"
+            id="musicStatus">
 
-        <div class="musicHint">
-
-            🎵 Tap Continue to start the music 🎵
+            🎵 Trying to start music...
 
         </div>
-
 
         <button
             id="continueBtn">
@@ -503,9 +327,7 @@ video{
 </section>
 
 
-<!-- =========================
-     PAGE 2
-========================= -->
+<!-- PAGE 2 -->
 
 <section
     class="page"
@@ -516,7 +338,6 @@ video{
         Shreyaa bby ektu eta dekho 🥺🫶🏻
 
     </div>
-
 
     <div class="videoBox">
 
@@ -530,12 +351,9 @@ video{
                 src="https://res.cloudinary.com/s4rjpsff/video/upload/v1788673996/SEND_THIS_TO_YOUR_FRIEND_SAYING_your_sorry__best_friend__720p.mp4"
                 type="video/mp4">
 
-            Your browser does not support this video.
-
         </video>
 
     </div>
-
 
     <button
         id="nextBtn">
@@ -547,42 +365,28 @@ video{
 </section>
 
 
-<!-- =========================
-     PAGE 3
-========================= -->
+<!-- PAGE 3 -->
 
 <section
     class="page"
     id="page3">
 
     <div class="finalEmoji">
-
         🥺🫶🏻
-
     </div>
-
 
     <div class="finalText">
-
         Baby really thollyyy 🥺🫶🏻
-
     </div>
 
-
     <div class="finalHeart">
-
         💗💗💗
-
     </div>
 
 </section>
 
 
 <script>
-
-/* =========================
-   ELEMENTS
-========================= */
 
 const bgMusic =
     document.getElementById("bgMusic");
@@ -596,57 +400,82 @@ const continueBtn =
 const nextBtn =
     document.getElementById("nextBtn");
 
+const musicStatus =
+    document.getElementById("musicStatus");
 
-/* =========================
-   MUSIC VOLUME
-========================= */
 
 bgMusic.volume = 0.55;
 
 
 /* =========================
-   START MUSIC
+   PLAY MUSIC
 ========================= */
 
 function playMusic(){
 
-    bgMusic.play()
-    .then(function(){
+    return bgMusic.play()
+        .then(function(){
 
-        console.log("Music started!");
+            musicStatus.textContent =
+                "🎵 Music is playing 🥺❤️";
 
-    })
-    .catch(function(error){
+        })
+        .catch(function(){
 
-        console.log(
-            "Music could not start:",
-            error
-        );
+            musicStatus.textContent =
+                "🎵 Tap once to start music";
 
-    });
+        });
 
 }
 
 
 /* =========================
-   CONTINUE BUTTON
+   AUTOPLAY ATTEMPT
+========================= */
+
+window.addEventListener(
+    "load",
+    function(){
+
+        playMusic();
+
+    }
+);
+
+
+/* =========================
+   FIRST USER INTERACTION
+========================= */
+
+document.addEventListener(
+    "click",
+    function(){
+
+        if(bgMusic.paused){
+
+            playMusic();
+
+        }
+
+    },
+    {
+        once:true
+    }
+);
+
+
+/* =========================
+   CONTINUE
 ========================= */
 
 continueBtn.addEventListener(
     "click",
     function(){
 
-        /*
-           User interaction-এর
-           ভিতরেই music start করছি।
-        */
-
-        playMusic();
-
-
-        /*
-           Page 2 show
-        */
+        if(bgMusic.paused){
+            playMusic();
+        }
 
         document
             .getElementById("page1")
@@ -656,24 +485,17 @@ continueBtn.addEventListener(
             .getElementById("page2")
             .classList.add("active");
 
-        window.scrollTo(0,0);
-
     }
 );
 
 
 /* =========================
-   VIDEO PLAY
+   VIDEO START
 ========================= */
 
 sorryVideo.addEventListener(
     "play",
     function(){
-
-        /*
-           Video চালু হলে
-           background music বন্ধ।
-        */
 
         bgMusic.pause();
 
@@ -682,37 +504,12 @@ sorryVideo.addEventListener(
 
 
 /* =========================
-   VIDEO PAUSE
-========================= */
-
-sorryVideo.addEventListener(
-    "pause",
-    function(){
-
-        /*
-           Video pause করলে music
-           automatically resume করবে না।
-
-           কারণ user চাইলে video pause করে
-           আবার শুনতে পারে।
-        */
-
-    }
-);
-
-
-/* =========================
-   VIDEO ENDED
+   VIDEO END
 ========================= */
 
 sorryVideo.addEventListener(
     "ended",
     function(){
-
-        /*
-           Video শেষ হলে
-           background music আবার চালু।
-        */
 
         playMusic();
 
@@ -721,16 +518,12 @@ sorryVideo.addEventListener(
 
 
 /* =========================
-   NEXT BUTTON
+   NEXT
 ========================= */
 
 nextBtn.addEventListener(
     "click",
     function(){
-
-        /*
-           Page 2 → Page 3
-        */
 
         document
             .getElementById("page2")
@@ -740,19 +533,9 @@ nextBtn.addEventListener(
             .getElementById("page3")
             .classList.add("active");
 
-
-        /*
-           Music চলতে থাকবে।
-        */
-
         if(bgMusic.paused){
-
             playMusic();
-
         }
-
-
-        window.scrollTo(0,0);
 
     }
 );
@@ -770,9 +553,7 @@ function createHeart(){
     heart.className =
         "heartFloat";
 
-
     const emojis = [
-
         "💗",
         "💕",
         "💖",
@@ -780,9 +561,7 @@ function createHeart(){
         "🫶🏻",
         "🥺",
         "💞"
-
     ];
-
 
     heart.innerHTML =
         emojis[
@@ -792,41 +571,25 @@ function createHeart(){
             )
         ];
 
-
     heart.style.left =
         Math.random() * 100 + "vw";
 
-
     heart.style.fontSize =
-        (18 + Math.random() * 15)
-        + "px";
-
+        (18 + Math.random() * 15) + "px";
 
     heart.style.animationDuration =
-        (4 + Math.random() * 3)
-        + "s";
+        (4 + Math.random() * 3) + "s";
 
-
-    document.body.appendChild(
-        heart
-    );
-
+    document.body.appendChild(heart);
 
     setTimeout(
         function(){
-
             heart.remove();
-
         },
         7000
     );
-
 }
 
-
-/* =========================
-   HEARTS START
-========================= */
 
 setInterval(
     createHeart,
@@ -835,7 +598,5 @@ setInterval(
 
 </script>
 
-
 </body>
-
 </html>
